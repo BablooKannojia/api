@@ -14,10 +14,11 @@ function Home(props) {
 
     // DELETE Rest API Data 
     async function deleteOperation(id) {
-        let res = await fetch("https://dummyjson.com/products" + id, {
+        let res = await fetch("https://dummyjson.com/products/" + id, {
             method: "DELETE"
         });
         res = await res.json();
+        alert("Item Deleted");
     }
     return (
         <>
